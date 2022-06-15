@@ -1,9 +1,10 @@
 import React from 'react';
+import Main from '../Main';
 import './App.css';
 
 const App: React.FC = () => {
   return (
-    <h1>Starting my new Project!</h1>
+    <Main />
   );
 }
 
