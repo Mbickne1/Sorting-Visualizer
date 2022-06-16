@@ -1,8 +1,22 @@
 import React from 'react';
+import Bar from './Bar';
+import styles from './Visualizer.module.css';
 
-const Visualizer: React.FC = () => {
+
+interface VisualizerProps {
+    barArray: number[]
+}
+
+const Visualizer: React.FC<VisualizerProps> = ({
+    barArray
+}) => {
+    console.log(barArray);
     return(
-        <h1>This is the visualizer</h1>
+        <div className={styles.visContainer}>
+            {barArray.map((bar, idx) => (
+                <Bar key={idx} value={bar}/>
+            ))}
+        </div>
     );
 }
 
